@@ -1,0 +1,94 @@
+<div class="detail">
+    <div class="detail-head">
+        <div class="detail-head-close">
+            <span>╳</span>
+        </div>
+        <div class="detail-head-item active">Basic</div>
+        <div class="detail-head-item">
+            <span class="detail-head-item-a">Error</span>
+            <%if(data.error){%>
+            <span class="detail-head-item-b"><%=data.error;%></span>
+            <%}%>
+        </div>
+        <div class="detail-head-item">
+            <span class="detail-head-item-a">Warn</span>
+            <%if(data.warn){%>
+            <span class="detail-head-item-c"><%=data.warn;%></span>
+            <%}%>
+        </div>
+    </div>
+    <div class="detail-body">
+        <div class="detail-body-item">
+            <%
+                for(var i in data.data){
+                var info=data.data[i];
+            %>
+            <div class="detail-body-item-area">
+                <div class="detail-body-item-area-head">
+                    <div class="detail-body-item-area-head-a"><i class="fa fa-caret-down"></i></div>
+                    <div class="detail-body-item-area-head-b"><%=info.packet;%></div>
+                </div>
+                <div class="detail-body-item-area-body">
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">ShortName:</div><div class="detail-body-item-desc-b"><%=info.packetshortname;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">Type:</div><div class="detail-body-item-desc-b"><%=info.type;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">Hash:</div><div class="detail-body-item-desc-b"><%=info.hash;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">SourceType:</div><div class="detail-body-item-desc-b"><%=info.sourcetype;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">Shortpath:</div><div class="detail-body-item-desc-b"><%=info.shortpath;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">Path:</div><div class="detail-body-item-desc-b"><%=info.path;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">isMaked:</div><div class="detail-body-item-desc-b"><%=info.ismake;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">isOutmap:</div><div class="detail-body-item-desc-b"><%=info.isoutmap;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">isOutput:</div><div class="detail-body-item-desc-b"><%=info.isoutput;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">MakerType:</div><div class="detail-body-item-desc-b"><%=info.makertype;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">OutputSuffix:</div><div class="detail-body-item-desc-b"><%=info.outputsuffix;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">OutputPath:</div><div class="detail-body-item-desc-b"><%=info.outputpath;%></div></div>
+                    <div class="detail-body-item-desc"><div class="detail-body-item-desc-a">ResultSize:</div><div class="detail-body-item-desc-b"><%=info.resultsize;%></div></div>
+                </div>
+            </div>
+            <%}%>
+        </div>
+        <div class="detail-body-item">
+            <%
+                for(var i in data.data){
+                var info=data.data[i];
+            %>
+            <div class="detail-body-item-area">
+                <div class="detail-body-item-area-head">
+                    <div class="detail-body-item-area-head-a"><i class="fa fa-caret-down"></i></div>
+                    <div class="detail-body-item-area-head-b"><%=info.packet;%></div>
+                </div>
+                <div class="detail-body-item-area-body">
+                    <%if(info.makeerrormessage.length>0){%>
+                        <%for(var t in info.makeerrormessage){%>
+                        <div class="detail-body-item-error"><div class="detail-body-item-error-a"><%=info.makeerrormessage[t];%></div></div>
+                        <%}%>
+                    <%}else{%>
+                        <div class="detail-body-item-nodata">No error message</div>
+                    <%}%>
+                </div>
+            </div>
+            <%}%>
+        </div>
+        <div class="detail-body-item">
+            <%
+                for(var i in data.data){
+                var info=data.data[i];
+            %>
+            <div class="detail-body-item-area">
+                <div class="detail-body-item-area-head">
+                    <div class="detail-body-item-area-head-a"><i class="fa fa-caret-down"></i></div>
+                    <div class="detail-body-item-area-head-b"><%=info.packet;%></div>
+                </div>
+                <div class="detail-body-item-area-body">
+                    <%if(info.makewarnmessage.length>0){%>
+                        <%for(var t in info.makewarnmessage){%>
+                        <div class="detail-body-item-warn"><div class="detail-body-item-warn-a"><%=info.makewarnmessage[t];%></div></div>
+                        <%}%>
+                    <%}else{%>
+                        <div class="detail-body-item-nodata">No warn message</div>
+                    <%}%>
+                </div>
+            </div>
+            <%}%>
+        </div>
+    </div>
+</div>

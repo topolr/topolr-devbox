@@ -1,0 +1,21 @@
+<div class="table">
+    <div class="table-head">
+        <%for(var i in data){%>
+        <div class="table-head-col" style="width:<%=data[i].width;%>px"><%=data[i].name;%></div>
+        <%}%>
+    </div>
+    <div class="table-body">
+        <%
+            for(var i in data){
+        %>
+        <div class="table-body-col<%=(data[i].className?(' '+data[i].className):'');%>" style="width:<%=data[i].width;%>px">
+            <%
+                for(var t=0;t<data[i].cols.length;t++){
+                var dt=data[i].cols[t];
+            %>
+            <div class="table-body-col-cell<%=(dt.className?(' '+dt.className):'');%>" num="<%=t;%>" title="<%=(dt.value&&dt.value.indexOf&&dt.value.indexOf('<')===-1?dt.value:'');%>"><%=dt.value;%></div>
+            <%}%>
+        </div>
+        <%}%>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+.detail{
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    cursor: default;
+    .detail-head{
+        line-height:24px;
+        display: flex;
+        padding-top:5px;
+        .detail-head-close{
+            width:25px;
+            display: -webkit-box;
+            -webkit-box-pack:center;
+            -webkit-box-align:center;
+            span{
+                display: block;
+                width:15px;
+                height:15px;
+                text-align: center;
+                font-size:12px;
+                line-height:15px;
+            }
+            &:hover{
+                span{
+                    background:#E79590;
+                    color:white;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .detail-head-item{
+            padding:0 5px 0 5px;
+            .detail-head-item-a{
+                display: inline-block;
+            }
+            .detail-head-item-b{
+                 display: inline-block;
+                 width:15px;
+                 height:15px;
+                 text-align: center;
+                 line-height:15px;
+                 border-radius: 50%;
+                 background:red;
+                 color:white;
+                 margin-left:3px;
+             }
+            .detail-head-item-c{
+                display: inline-block;
+                width:15px;
+                height:15px;
+                text-align: center;
+                line-height:15px;
+                border-radius: 50%;
+                background:goldenrod;
+                color:white;
+                margin-left:3px;
+            }
+            &.active{
+                border:1px solid #CDCDCD;
+                border-bottom: 0;
+            }
+        }
+    }
+    .detail-body{
+        border-top:1px solid #CDCDCD;
+        position:absolute;
+        top:30px;
+        left:0;
+        right:0;
+        bottom:0;
+        .detail-body-item{
+            display:none;
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            &.active{
+                display:block;
+            }
+        }
+    }
+    .detail-body-item-area{
+        border-bottom: 1px solid #E0E0E0;
+        margin:5px 5px 0 5px;
+        .detail-body-item-area-head{
+            line-height:20px;
+            display:flex;
+            .detail-body-item-area-head-a{
+                width:20px;
+                text-align: center;
+                font-size:15px;
+            }
+            .detail-body-item-area-head-b{
+                font-weight: 500;
+                font-size:13px;
+            }
+        }
+        .detail-body-item-area-body{
+            padding:0 0 5px 0;
+            .detail-body-item-desc{
+                display: flex;
+                line-height:20px;
+                .detail-body-item-desc-a{
+                    padding:0 5px 0 30px;
+                    font-weight: 500;
+                }
+                .detail-body-item-desc-b{}
+            }
+            .detail-body-item-error{
+                .detail-body-item-error-a{
+                    margin:0 10px 10px 20px;
+                    border-bottom: 1px solid #D7D7D7;
+                    padding-bottom: 10px;
+                    color:red;
+                }
+            }
+            .detail-body-item-warn{
+                .detail-body-item-warn-a{
+                    margin:0 10px 10px 20px;
+                    border-bottom: 1px solid #D7D7D7;
+                    padding-bottom: 10px;
+                    color:yellowgreen;
+                }
+            }
+            .detail-body-item-nodata{
+                line-height:200px;
+                text-align: center;
+                font-size:20px;
+                color:#C0C0C0;
+                font-weight: 800;
+            }
+        }
+        &:last-child{
+            border-bottom: 0;
+        }
+        &.close{
+            .detail-body-item-area-head{
+                .detail-body-item-area-head-a{
+                    transform:rotate(-90deg);
+                }
+            }
+            .detail-body-item-area-body{
+                display:none;
+            }
+        }
+    }
+}

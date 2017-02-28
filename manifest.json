@@ -1,0 +1,47 @@
+{
+  "name": "topolr-devbox",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "logo/16.png",
+    "48": "logo/48.png",
+    "128": "logo/128.png"
+  },
+  "description": "develop toolkit of topolr",
+  "background": {
+    "page": "pages/background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["app/src/content.js"]
+    }
+  ],
+  "permissions": [
+    "*://*/*",
+    "management",
+    "tabs",
+    "storage",
+    "browsingData",
+    "webRequest",
+    "webRequestBlocking",
+    "notifications",
+    "background"
+  ],
+  "sandbox": {
+    "pages": ["app/base/lib/sandbox.html"]
+  },
+  "options_ui": {
+    "page": "pages/option.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "logo/16.png",
+      "48": "logo/48.png"
+    },
+    "default_title": "topolr-devbox",
+    "default_popup": "pages/popup.html"
+  },
+  "devtools_page": "index.html"
+}

@@ -1,0 +1,37 @@
+<div class="popup-watcher-list">
+    <div class="popup-watcher-item nt">
+        <div class="popup-watcher-item-con">
+            <div class="popup-watcher-item-b" style="padding-left:8px">Node Inspect Watcher List</div>
+        </div>
+    </div>
+    <%console.log(data);%>
+    <%if(data.length>0){%>
+    <%for(var i in data){%>
+        <div class="popup-watcher-item item <%=(data[i].error?'haserror':'');%>" data-host="<%=data[i].host;%>" data-port="<%=data[i].port;%>">
+            <div class="popup-watcher-item-con<%=(data[i].state?' connected':'');%>">
+                <div class="popup-watcher-item-c" data-host="<%=data[i].host;%>" data-port="<%=data[i].port;%>" data-enable="<%=data[i].enable;%>" title="<%=(data[i].enable?'watch':'unwatch');%>">
+                    <%if(data[i].enable){%>
+                    <span><i class="fa fa-eye"></i></span>
+                    <%}else{%>
+                    <span><i class="fa fa-eye-slash"></i></span>
+                    <%}%>
+                </div>
+                <div class="popup-watcher-item-b"><%=data[i].host;%></div>
+                <div class="popup-watcher-item-b"><%=data[i].port;%></div>
+                <div class="popup-watcher-item-b"><%=data[i].circle/1000;%>s</div>
+                <div class="popup-watcher-item-d" data-host="<%=data[i].host;%>" data-port="<%=data[i].port;%>" data-closewin="<%=data[i].closewin;%>" title="<%=(data[i].closewin?'auto close window':'donot close window');%>">
+                    <%if(data[i].closewin){%>
+                    <span><i class="fa fa-dot-circle-o"></i></span>
+                    <%}else{%>
+                    <span><i class="fa fa-circle-o"></i></span>
+                    <%}%>
+                </div>
+            </div>
+            <div class="popup-watcher-item-error">Error:request fail,maybe the port is running</div>
+        </div>
+    <%}%>
+    <%}else{%>
+    <div class="popup-watcher-noitem">no watcher</div>
+    <%}%>
+</div>
+<!--<div class="popup-watcher-foot">Open Devtools To Set</div>-->

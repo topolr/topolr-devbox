@@ -1,0 +1,72 @@
+.form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  cursor: default; }
+  .form .form-head {
+    line-height: 30px;
+    display: flex;
+    border-bottom: 1px solid #A3A3A3; }
+    .form .form-head .form-head-title {
+      flex: 1; }
+    .form .form-head .form-head-close {
+      width: 25px;
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center; }
+      .form .form-head .form-head-close span {
+        width: 15px;
+        height: 15px;
+        font-size: 12px;
+        line-height: 15px;
+        display: block;
+        text-align: center; }
+      .form .form-head .form-head-close:hover span {
+        background: #E79590;
+        color: white;
+        border-radius: 50%; }
+  .form .form-body {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    right: 0;
+    bottom: 41px; }
+    .form .form-body .form-body-field {
+      padding: 0 10px 0 10px; }
+      .form .form-body .form-body-field .form-body-field-label {
+        line-height: 30px; }
+      .form .form-body .form-body-field .checkbox {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 10px; }
+        .form .form-body .form-body-field .checkbox .checkbox-in {
+          width: 30px;
+          text-align: center;
+          display: inline-block;
+          vertical-align: middle; }
+          .form .form-body .form-body-field .checkbox .checkbox-in input {
+            width: 17px;
+            height: 17px; }
+        .form .form-body .form-body-field .checkbox .checkbox-desc {
+          display: inline-block;
+          vertical-align: middle; }
+    .form .form-body .form-body-error {
+      line-height: 30px;
+      color: red;
+      padding: 0 10px 0 10px; }
+  .form .form-foot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 30px;
+    height: 40px;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 10px; }
+    .form .form-foot .form-foot-submit {
+      height: 30px; }
+
+/*# sourceMappingURL=form.css.map */

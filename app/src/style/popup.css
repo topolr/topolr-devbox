@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.popup-state {
+  white-space: nowrap;
+  padding: 15px 10px 10px 10px;
+  position: relative; }
+
+.popup-state .popup-state-success {
+  display: block; }
+
+.popup-state .popup-state-success-a {
+  font-size: 17px;
+  color: limegreen; }
+
+.popup-state .popup-state-success-b {
+  font-size: 13px;
+  padding-left: 20px;
+  line-height: 25px; }
+
+.popup-state .popup-state-fail {
+  display: none; }
+
+.popup-state .popup-state-fail-a {
+  font-size: 17px;
+  color: red; }
+
+.popup-state .popup-state-fail-b {
+  font-size: 13px;
+  padding-left: 20px;
+  line-height: 25px; }
+
+.popup-state.fail .popup-state-success {
+  display: none; }
+
+.popup-state.fail .popup-state-fail {
+  display: block; }
+
+.popup-watcher .popup-watcher-list {
+  cursor: default; }
+  .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con {
+    display: flex;
+    line-height: 30px;
+    border-bottom: 1px dotted #D7D7D7;
+    transition: all ease-out .5s;
+    overflow: hidden; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con .popup-watcher-item-a {
+      width: 30px;
+      text-align: center; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con .popup-watcher-item-b {
+      flex: 1;
+      text-align: center; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con .popup-watcher-item-c, .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con .popup-watcher-item-d {
+      width: 30px;
+      text-align: center;
+      cursor: pointer;
+      transition: all ease-out .5s; }
+      .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con .popup-watcher-item-c:hover, .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con .popup-watcher-item-d:hover {
+        background: #E8E8E8; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con .popup-watcher-item-e {
+      width: 30px;
+      text-align: center; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con.connected {
+      background: #55DB98;
+      color: white;
+      border-radius: 5px;
+      margin: 3px 0 3px 0; }
+      .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con.connected .popup-watcher-item-c:hover, .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con.connected .popup-watcher-item-d:hover {
+        background: #4BC186; }
+      .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con.connected:hover {
+        background: #50CE90; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-con:hover {
+      background: #fafafa; }
+  .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-error {
+    display: none;
+    padding: 5px 8px 5px 8px;
+    color: white;
+    background: #F77171;
+    position: relative; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item .popup-watcher-item-error:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #F77171;
+      position: absolute;
+      left: 10px;
+      bottom: 100%; }
+  .popup-watcher .popup-watcher-list .popup-watcher-item.nt .popup-watcher-item-con {
+    background: #F7F7F7;
+    border-top: 1px solid #D7D7D7;
+    border-bottom: 1px solid #E5E5E5; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item.nt .popup-watcher-item-con .popup-watcher-item-b {
+      text-align: left; }
+    .popup-watcher .popup-watcher-list .popup-watcher-item.nt .popup-watcher-item-con:hover {
+      background: #F7F7F7; }
+  .popup-watcher .popup-watcher-list .popup-watcher-item.haserror .popup-watcher-item-error {
+    display: block; }
+  .popup-watcher .popup-watcher-list .popup-watcher-item:last-child .popup-watcher-item-con {
+    border-bottom: 0; }
+  .popup-watcher .popup-watcher-list .popup-watcher-noitem {
+    line-height: 30px;
+    text-align: center;
+    color: #888888; }
+.popup-watcher .popup-watcher-foot {
+  line-height: 25px;
+  padding: 0 10px 0 10px;
+  color: #C0C0C0;
+  text-align: right;
+  font-size: 12px; }
+
+/*# sourceMappingURL=popup.css.map */

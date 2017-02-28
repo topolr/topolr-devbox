@@ -1,0 +1,41 @@
+<div class="form">
+    <div class="form-head">
+        <div class="form-head-close">
+            <span>╳</span>
+        </div>
+        <div class="form-head-title"><%=data.title;%></div>
+    </div>
+    <div class="form-body">
+        <%for(var i in data.fields){%>
+        <div class="form-body-field">
+            <div class="form-body-field-label"><%=data.fields[i].label;%></div>
+            <div class="form-body-field-input">
+                <%if(data.fields[i].type==='input'){%>
+                <input type="" placeholder="" value="<%=data.fields[i].value;%>" name="<%=data.fields[i].name;%>"/>
+                <%}else if(data.fields[i].type==='option'){%>
+                <select value="<%=data.fields[i].value;%>" name="<%=data.fields[i].name;%>">
+                    <%for(var t in data.fields[i].option){%>
+                    <option value="<%=data.fields[i].option[t].value;%>"<%=(data.fields[i].value==data.fields[i].option[t].value?' selected':'');%>>
+                        <%=data.fields[i].option[t].key;%>
+                    </option>
+                    <%}%>
+                </select>
+                <%}else if(data.fields[i].type==='checkbox'){%>
+                    <%for(var t in data.fields[i].checkbox){%>
+                    <div class="checkbox">
+                        <div class="checkbox-in">
+                            <input type="radio" name="<%=data.fields[i].name;%>" value="<%=data.fields[i].value;%>"></input>
+                        </div>
+                        <div class="checkbox-desc"><%=data.fields[i].checkbox[t].key;%></div>
+                    </div>
+                    <%}%>
+                <%}%>
+            </div>
+        </div>
+        <%}%>
+        <div class="form-body-error"></div>
+    </div>
+    <div class="form-foot">
+        <button class="form-foot-submit">save</button>
+    </div>
+</div>

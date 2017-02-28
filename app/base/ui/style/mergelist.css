@@ -1,0 +1,47 @@
+.mergelist {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .mergelist .mergelist-item {
+    background: #F3F3F3; }
+    .mergelist .mergelist-item .mergelist-item-head {
+      line-height: 30px;
+      background: white;
+      display: flex;
+      border-bottom: 1px solid #CDCDCD; }
+      .mergelist .mergelist-item .mergelist-item-head .mergelist-item-head-a {
+        width: 30px;
+        text-align: center; }
+        .mergelist .mergelist-item .mergelist-item-head .mergelist-item-head-a.success {
+          color: forestgreen; }
+        .mergelist .mergelist-item .mergelist-item-head .mergelist-item-head-a.fail {
+          color: red; }
+      .mergelist .mergelist-item .mergelist-item-head .mergelist-item-head-b {
+        padding: 0 10px 0 0; }
+      .mergelist .mergelist-item .mergelist-item-head .mergelist-item-head-c {
+        padding: 0 10px 0 10px; }
+      .mergelist .mergelist-item .mergelist-item-head .mergelist-item-head-aa {
+        display: flex;
+        flex: 1; }
+      .mergelist .mergelist-item .mergelist-item-head .mergelist-item-head-bb {
+        width: 30px;
+        text-align: center;
+        transition: all ease-out .5s; }
+    .mergelist .mergelist-item .mergelist-item-body {
+      overflow: hidden;
+      transition: all ease-out .5s; }
+      .mergelist .mergelist-item .mergelist-item-body .mergelist-item-body-item {
+        padding: 0 20px 0 20px;
+        line-height: 22px; }
+        .mergelist .mergelist-item .mergelist-item-body .mergelist-item-body-item:hover {
+          background: #E5E5E5; }
+    .mergelist .mergelist-item.close .mergelist-item-head .mergelist-item-head-bb {
+      transform: rotate(180deg); }
+    .mergelist .mergelist-item.close .mergelist-item-body {
+      height: 0; }
+
+/*# sourceMappingURL=mergelist.css.map */

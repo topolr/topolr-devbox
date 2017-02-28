@@ -1,0 +1,9 @@
+{
+  "builter": {
+    "host":"localhost",
+    "port":8099
+  },
+  "nodewatcher":[
+    {"host":"localhost","port":"9229","circle":3000,"enable":true,"closewin":true}
+  ]
+}

@@ -1,0 +1,64 @@
+.mergelist{
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+    .mergelist-item{
+        background:#F3F3F3;
+        .mergelist-item-head{
+            line-height:30px;
+            background:white;
+            display:flex;
+            border-bottom: 1px solid #CDCDCD;
+            .mergelist-item-head-a{
+                width:30px;
+                text-align: center;
+                &.success{
+                    color:forestgreen;
+                }
+                &.fail{
+                    color:red;
+                }
+            }
+            .mergelist-item-head-b{
+                padding:0 10px 0 0;
+            }
+            .mergelist-item-head-c{
+                padding:0 10px 0 10px;
+            }
+            .mergelist-item-head-aa{
+                display:flex;
+                flex:1;
+            }
+            .mergelist-item-head-bb{
+                width:30px;
+                text-align: center;
+                transition:all ease-out .5s;
+            }
+        }
+        .mergelist-item-body{
+            overflow:hidden;
+            transition:all ease-out .5s;
+            .mergelist-item-body-item{
+                padding:0 20px 0 20px;
+                line-height:22px;
+                &:hover{
+                    background:#E5E5E5;
+                }
+            }
+        }
+        &.close{
+            .mergelist-item-head{
+                .mergelist-item-head-bb{
+                    transform:rotate(180deg);
+                }
+            }
+            .mergelist-item-body{
+                height:0;
+            }
+        }
+    }
+}

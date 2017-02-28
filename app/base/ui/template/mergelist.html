@@ -1,0 +1,59 @@
+<div class="mergelist">
+    <%console.log(data);%>
+    <%for(var i in data.data){%>
+    <div class="mergelist-item">
+        <div class="mergelist-item-head">
+            <div class="mergelist-item-head-aa">
+                <%if(data.data[i].done){%>
+                <div class="mergelist-item-head-a success">
+                    <i class="fa fa-check-circle"></i>
+                </div>
+                <%}else{%>
+                <div class="mergelist-item-head-a fail">
+                    <i class="fa fa-times-circle"></i>
+                </div>
+                <%}%>
+                <div class="mergelist-item-head-b"><%=data.data[i].name;%></div>
+                <%
+                    var len=0;
+                    for(var t in data.data[i].packets){
+                        len+=data.data[i].packets[t].length;
+                    }
+                %>
+                <div class="mergelist-item-head-c">merge <%=len;%> files</div>
+                <div class="mergelist-item-head-c"><%=data.data[i].size;%></div>
+            </div>
+            <div class="mergelist-item-head-bb">
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="mergelist-item-body">
+            <%
+                var mt={
+                p:'packet',
+                t:'template',
+                j:'js',
+                c:'css',
+                n:'text',
+                s:'json',
+                i:'image',
+                m:'map',
+                h:'html'};
+            %>
+            <%for(var t in data.data[i].packets){%>
+            <div class="mergelist-item-body-item">
+                <div><%=mt[t];%></div>
+                <%for(var u=0;u<data.data[i].packets[t].length;u++){%>
+                <div>
+                    <span><%=(u/1+1);%></span>
+                    <span style="padding-left:5px;">
+                        <%=data.data[i].packets[t][u]+(u==0&&t=='p'?'<span style="padding-left:20px;">(boot option)</span>':'');%>
+                    </span>
+                </div>
+                <%}%>
+            </div>
+            <%}%>
+        </div>
+    </div>
+    <%}%>
+</div>
